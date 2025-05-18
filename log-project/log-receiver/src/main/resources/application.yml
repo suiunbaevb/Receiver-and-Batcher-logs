@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: log-receiver        # имя сервиса в Actuator / logs
+  threads:
+    virtual:
+      enabled: true           # Loom-потоки для приёма HTTP
+
+server:
+  port: 9091                  # как сказано в задании
+  # --- HTTPS можно вернуть позже, раскомментировав блок ниже ---
+  # ssl:
+  #   enabled: true
+  #   key-store: classpath:keystore.p12
+  #   key-store-password: changeit
+  #   key-store-type: PKCS12
+  #   key-alias: log-receiver
+
+# Каталог, куда receiver пишет сырые логи
+log-dir: ../logs              # относительный к каталогу модуля путь

@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: log-batcher
+
+# Откуда batcher читает сырые файлы и куда кладёт пакетные
+log-dir: ../logs              # тот же самый каталог, что и у receiver
